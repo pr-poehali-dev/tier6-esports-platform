@@ -59,7 +59,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
           style={{
             position: "absolute",
             top: 0, left: 0, right: 0, bottom: 0,
-            background: "radial-gradient(ellipse 50% 80% at 90% 50%, rgba(255,107,26,0.06) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse 50% 80% at 90% 50%, rgba(232,212,77,0.05) 0%, transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -73,10 +73,13 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 40,
-              background: "linear-gradient(135deg, rgba(255,107,26,0.2), rgba(255,61,0,0.05))",
+              fontSize: 18,
+              fontFamily: "Orbitron, sans-serif",
+              fontWeight: 900,
+              color: "var(--neon)",
+              background: "rgba(232,212,77,0.08)",
               borderRadius: 8,
-              border: "1px solid rgba(255,107,26,0.3)",
+              border: "1px solid rgba(232,212,77,0.25)",
               flexShrink: 0,
             }}
           >
@@ -115,7 +118,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
               {[
                 { icon: "Globe", v: team.region },
-                { icon: "Flag", v: `${team.flag} ${team.country}` },
+                { icon: "Flag", v: team.country },
                 { icon: "Calendar", v: `Основана: ${team.founded}` },
                 { icon: "Users", v: `${team.players.length} игроков` },
               ].map((d) => (
@@ -131,7 +134,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                     fontWeight: 500,
                   }}
                 >
-                  <Icon name={d.icon as any} size={13} />
+                  <Icon name={d.icon} size={13} />
                   {d.v}
                 </div>
               ))}
@@ -144,7 +147,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                 fontWeight: 900,
                 fontSize: 48,
                 color: "var(--neon)",
-                textShadow: "0 0 30px rgba(255,107,26,0.5)",
+                textShadow: "0 0 30px rgba(232,212,77,0.4)",
                 lineHeight: 1,
               }}
             >
@@ -164,7 +167,6 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
         <StatCard label="Winrate" value={`${team.winRate}%`} large />
         <StatCard label="Карт сыграно" value={team.mapsPlayed} color="#60a5fa" large />
         <StatCard label="Avg Rating" value={team.avgRating.toFixed(2)} large />
-        <StatCard label="Призовые" value="55 000 ₽" color="#facc15" large />
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }} className="team-grid">
@@ -202,7 +204,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                   textAlign: "left",
                   transition: "background 0.15s",
                 }}
-                onMouseEnter={e => p === "spokyso" && (e.currentTarget.style.background = "rgba(255,107,26,0.05)")}
+                onMouseEnter={e => p === "spokyso" && (e.currentTarget.style.background = "rgba(232,212,77,0.05)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
                 <span
@@ -221,15 +223,18 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                     width: 32,
                     height: 32,
                     borderRadius: 4,
-                    background: "rgba(255,107,26,0.08)",
-                    border: "1px solid rgba(255,107,26,0.15)",
+                    background: "rgba(232,212,77,0.07)",
+                    border: "1px solid rgba(232,212,77,0.15)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: 14,
+                    fontFamily: "Orbitron, sans-serif",
+                    fontWeight: 700,
+                    fontSize: 9,
+                    color: "var(--neon)",
                   }}
                 >
-                  {p === "spokyso" ? "👻" : "🎮"}
+                  {p === "spokyso" ? "SP" : "PLR"}
                 </div>
                 <div style={{ flex: 1 }}>
                   <div
@@ -248,7 +253,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                 </div>
                 {p === "spokyso" && (
                   <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                    <span className="tag tag-orange">1.31</span>
+                    <span className="tag tag-orange">0.00</span>
                     <Icon name="ChevronRight" size={14} style={{ color: "var(--neon)" }} />
                   </div>
                 )}
@@ -329,7 +334,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                       background: m.winRate >= 70
                         ? "linear-gradient(90deg, #22c55e, #16a34a)"
                         : m.winRate >= 50
-                        ? "linear-gradient(90deg, var(--neon), #ff3d00)"
+                        ? "linear-gradient(90deg, var(--neon), #c8a800)"
                         : "linear-gradient(90deg, #ef4444, #dc2626)",
                       borderRadius: 2,
                       transition: "width 0.6s ease",
@@ -369,7 +374,7 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                 gap: 16,
                 flexWrap: "wrap",
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.03)")}
+              onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.03)")}
               onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
             >
               <span
@@ -430,29 +435,16 @@ export default function TeamPage({ teamId, onNavigate }: TeamPageProps) {
                   position: "absolute",
                   top: 0, left: 0, right: 0,
                   height: 2,
-                  background: ach.place.includes("1") ? "linear-gradient(90deg, #facc15, #f97316)" : ach.place.includes("2") ? "linear-gradient(90deg, #94a3b8, #64748b)" : "linear-gradient(90deg, #cd7c2e, #92400e)",
+                  background: "linear-gradient(90deg, var(--neon), #c8a800)",
                 }}
               />
-              <div style={{ fontSize: 24, marginBottom: 10 }}>{ach.place.split(" ")[0]}</div>
               <div style={{ fontFamily: "Rajdhani, sans-serif", fontWeight: 700, fontSize: 15, color: "#e0e4ed", marginBottom: 6 }}>
                 {ach.title}
               </div>
               <div style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 13, color: "var(--text-mid)", marginBottom: 8 }}>
-                {ach.place.replace(ach.place.split(" ")[0] + " ", "")}
+                {ach.place}
               </div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ fontFamily: "Share Tech Mono, monospace", fontSize: 11, color: "var(--text-dim)" }}>{ach.date}</span>
-                <span
-                  style={{
-                    fontFamily: "Share Tech Mono, monospace",
-                    fontSize: 12,
-                    color: "#facc15",
-                    fontWeight: 700,
-                  }}
-                >
-                  {ach.prize}
-                </span>
-              </div>
+              <span style={{ fontFamily: "Share Tech Mono, monospace", fontSize: 11, color: "var(--text-dim)" }}>{ach.date}</span>
             </div>
           ))}
         </div>

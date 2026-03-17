@@ -27,7 +27,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         {/* Decorative lines */}
         <div style={{
           position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
-          background: "radial-gradient(ellipse 60% 50% at 70% 50%, rgba(255,107,26,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse 60% 50% at 70% 50%, rgba(232,212,77,0.05) 0%, transparent 70%)",
           pointerEvents: "none"
         }} />
         <div className="glow-line" style={{ position: "absolute", top: 0, left: 0, right: 0 }} />
@@ -51,7 +51,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             }}
           >
             TIER 6{" "}
-            <span style={{ color: "var(--neon)", textShadow: "0 0 30px rgba(255,107,26,0.5)" }}>
+            <span style={{ color: "var(--neon)", textShadow: "0 0 30px rgba(232,212,77,0.4)" }}>
               СТАТИСТИКА
             </span>{" "}
             И РЕЙТИНГИ
@@ -97,7 +97,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 padding: "10px 24px",
                 background: "transparent",
                 color: "var(--neon)",
-                border: "1px solid rgba(255,107,26,0.4)",
+                border: "1px solid rgba(232,212,77,0.35)",
                 borderRadius: 4,
                 fontFamily: "Orbitron, sans-serif",
                 fontWeight: 700,
@@ -108,7 +108,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 transition: "all 0.2s",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = "rgba(255,107,26,0.08)";
+                e.currentTarget.style.background = "rgba(232,212,77,0.08)";
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = "transparent";
@@ -222,8 +222,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               overflow: "hidden",
             }}
             onMouseEnter={e => {
-              (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,107,26,0.4)";
-              (e.currentTarget as HTMLElement).style.background = "rgba(255,107,26,0.04)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(232,212,77,0.35)";
+              (e.currentTarget as HTMLElement).style.background = "rgba(232,212,77,0.04)";
             }}
             onMouseLeave={e => {
               (e.currentTarget as HTMLElement).style.borderColor = "var(--surface-3)";
@@ -238,10 +238,13 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: 22,
-                  background: "rgba(255,107,26,0.1)",
+                  fontSize: 13,
+                  fontFamily: "Orbitron, sans-serif",
+                  fontWeight: 900,
+                  color: "var(--neon)",
+                  background: "rgba(232,212,77,0.08)",
                   borderRadius: 6,
-                  border: "1px solid rgba(255,107,26,0.2)",
+                  border: "1px solid rgba(232,212,77,0.2)",
                   flexShrink: 0,
                 }}
               >
@@ -275,7 +278,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <div style={{ display: "flex", gap: 8 }}>
                   <span className="tag tag-orange">{team.region}</span>
                   <span style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 12, color: "var(--text-dim)" }}>
-                    {team.flag} {team.country}
+                    {team.country}
                   </span>
                 </div>
               </div>
@@ -401,8 +404,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               transition: "all 0.2s",
             }}
             onMouseEnter={e => {
-              (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,107,26,0.4)";
-              (e.currentTarget as HTMLElement).style.background = "rgba(255,107,26,0.04)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(232,212,77,0.35)";
+              (e.currentTarget as HTMLElement).style.background = "rgba(232,212,77,0.04)";
             }}
             onMouseLeave={e => {
               (e.currentTarget as HTMLElement).style.borderColor = "var(--surface-3)";
@@ -417,10 +420,13 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: 26,
-                  background: "linear-gradient(135deg, rgba(255,107,26,0.2), rgba(255,61,0,0.1))",
+                  fontSize: 14,
+                  fontFamily: "Orbitron, sans-serif",
+                  fontWeight: 900,
+                  color: "var(--neon)",
+                  background: "rgba(232,212,77,0.1)",
                   borderRadius: 6,
-                  border: "1px solid rgba(255,107,26,0.3)",
+                  border: "1px solid rgba(232,212,77,0.25)",
                   flexShrink: 0,
                 }}
               >
@@ -439,7 +445,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                     {player.nickname}
                   </span>
                   <span style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 12, color: "var(--text-dim)" }}>
-                    {player.flag}
+                    {player.country}
                   </span>
                 </div>
                 <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -545,7 +551,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 gap: 16,
                 transition: "background 0.15s",
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.03)")}
+              onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.03)")}
               onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
             >
               <span
@@ -642,10 +648,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   position: "absolute",
                   top: 0, left: 0, right: 0,
                   height: 2,
-                  background: "linear-gradient(90deg, var(--neon), #ff3d00)",
+                  background: "linear-gradient(90deg, var(--neon), #c8a800)",
                 }}
               />
-              <div style={{ fontSize: 22, marginBottom: 8 }}>{ach.place.split(" ")[0]}</div>
               <div
                 style={{
                   fontFamily: "Rajdhani, sans-serif",
@@ -657,32 +662,21 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               >
                 {ach.title}
               </div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span
-                  style={{
-                    fontFamily: "Rajdhani, sans-serif",
-                    fontSize: 12,
-                    color: "var(--text-mid)",
-                  }}
-                >
-                  {ach.place.replace(ach.place.split(" ")[0] + " ", "")}
-                </span>
-                <span
-                  style={{
-                    fontFamily: "Share Tech Mono, monospace",
-                    fontSize: 11,
-                    color: "var(--neon)",
-                  }}
-                >
-                  {ach.prize}
-                </span>
+              <div
+                style={{
+                  fontFamily: "Rajdhani, sans-serif",
+                  fontSize: 12,
+                  color: "var(--text-mid)",
+                  marginBottom: 8,
+                }}
+              >
+                {ach.place}
               </div>
               <div
                 style={{
                   fontFamily: "Share Tech Mono, monospace",
                   fontSize: 10,
                   color: "var(--text-dim)",
-                  marginTop: 4,
                 }}
               >
                 {ach.date}

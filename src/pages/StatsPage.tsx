@@ -62,13 +62,16 @@ export default function StatsPage() {
             style={{
               width: 48,
               height: 48,
-              fontSize: 24,
+              fontFamily: "Orbitron, sans-serif",
+              fontWeight: 900,
+              fontSize: 14,
+              color: "var(--neon)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "rgba(255,107,26,0.15)",
+              background: "rgba(232,212,77,0.08)",
               borderRadius: 6,
-              border: "1px solid rgba(255,107,26,0.3)",
+              border: "1px solid rgba(232,212,77,0.25)",
             }}
           >
             {p.avatar}
@@ -95,7 +98,7 @@ export default function StatsPage() {
                 fontWeight: 900,
                 fontSize: 32,
                 color: "var(--neon)",
-                textShadow: "0 0 20px rgba(255,107,26,0.5)",
+                textShadow: "0 0 20px rgba(232,212,77,0.4)",
               }}
             >
               {p.stats.rating.toFixed(2)}
@@ -160,7 +163,7 @@ export default function StatsPage() {
             gap: 10,
           }}
         >
-          <span style={{ fontSize: 20 }}>{t.logo}</span>
+          <span style={{ fontFamily: "Orbitron, sans-serif", fontWeight: 900, fontSize: 14, color: "var(--neon)" }}>{t.logo}</span>
           {t.name} — Командная статистика
         </div>
 
@@ -172,8 +175,7 @@ export default function StatsPage() {
             { label: "Winrate", value: `${t.winRate}%`, color: "var(--neon)" },
             { label: "Средний рейтинг", value: t.avgRating.toFixed(2), color: "var(--neon)" },
             { label: "Карт сыграно", value: t.mapsPlayed, color: "#60a5fa" },
-            { label: "Лучшая карта", value: "Mirage", color: "#facc15" },
-            { label: "Призовые", value: "55 000 ₽", color: "#facc15" },
+            { label: "Лучшая карта", value: "—", color: "var(--text-mid)" },
           ].map((s) => (
             <div
               key={s.label}

@@ -13,7 +13,7 @@
     --popover: 222 18% 8%;
     --popover-foreground: 210 20% 92%;
 
-    --primary: 28 100% 55%;
+    --primary: 52 95% 58%;
     --primary-foreground: 222 20% 5%;
 
     --secondary: 222 15% 12%;
@@ -22,7 +22,7 @@
     --muted: 222 15% 12%;
     --muted-foreground: 215 15% 45%;
 
-    --accent: 28 100% 55%;
+    --accent: 52 95% 58%;
     --accent-foreground: 222 20% 5%;
 
     --destructive: 0 72% 51%;
@@ -30,23 +30,23 @@
 
     --border: 222 15% 14%;
     --input: 222 15% 14%;
-    --ring: 28 100% 55%;
+    --ring: 52 95% 58%;
 
     --radius: 0.25rem;
 
     --sidebar-background: 222 20% 5%;
     --sidebar-foreground: 210 20% 92%;
-    --sidebar-primary: 28 100% 55%;
+    --sidebar-primary: 52 95% 58%;
     --sidebar-primary-foreground: 222 20% 5%;
     --sidebar-accent: 222 15% 12%;
     --sidebar-accent-foreground: 210 20% 75%;
     --sidebar-border: 222 15% 14%;
-    --sidebar-ring: 28 100% 55%;
+    --sidebar-ring: 52 95% 58%;
 
     /* Custom vars */
-    --neon: #ff6b1a;
-    --neon-dim: rgba(255, 107, 26, 0.15);
-    --neon-glow: 0 0 20px rgba(255, 107, 26, 0.4);
+    --neon: #e8d44d;
+    --neon-dim: rgba(232, 212, 77, 0.15);
+    --neon-glow: 0 0 20px rgba(232, 212, 77, 0.4);
     --surface: #0d0f14;
     --surface-2: #12151c;
     --surface-3: #1a1e27;
@@ -96,7 +96,7 @@
 
   .neon-text {
     color: var(--neon);
-    text-shadow: 0 0 10px rgba(255, 107, 26, 0.6);
+    text-shadow: 0 0 10px rgba(232, 212, 77, 0.6);
   }
 
   .neon-border {
@@ -110,7 +110,7 @@
   }
 
   .card-dark:hover {
-    border-color: rgba(255, 107, 26, 0.3);
+    border-color: rgba(232, 212, 77, 0.3);
     transition: border-color 0.2s ease;
   }
 
@@ -134,13 +134,13 @@
 
   .grid-scan {
     background-image:
-      linear-gradient(rgba(255, 107, 26, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 107, 26, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(232, 212, 77, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 212, 77, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
   .rank-badge {
-    background: linear-gradient(135deg, var(--neon), #ff3d00);
+    background: linear-gradient(135deg, var(--neon), #c8a800);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -189,9 +189,9 @@
   }
 
   .tag-orange {
-    background: rgba(255, 107, 26, 0.15);
+    background: rgba(232, 212, 77, 0.1);
     color: var(--neon);
-    border: 1px solid rgba(255, 107, 26, 0.3);
+    border: 1px solid rgba(232, 212, 77, 0.3);
   }
 
   .tag-green {

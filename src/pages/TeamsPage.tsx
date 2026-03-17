@@ -74,7 +74,7 @@ export default function TeamsPage({ onNavigate }: TeamsPageProps) {
             transition: "background 0.15s",
             borderRadius: i === teams.length - 1 ? "0 0 6px 6px" : 0,
           }}
-          onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.06)")}
+          onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.05)")}
           onMouseLeave={e => (e.currentTarget.style.background = "var(--surface-2)")}
         >
           <span
@@ -96,10 +96,13 @@ export default function TeamsPage({ onNavigate }: TeamsPageProps) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: 18,
-                background: "rgba(255,107,26,0.1)",
+                fontFamily: "Orbitron, sans-serif",
+                fontWeight: 900,
+                fontSize: 11,
+                color: "var(--neon)",
+                background: "rgba(232,212,77,0.08)",
                 borderRadius: 4,
-                border: "1px solid rgba(255,107,26,0.2)",
+                border: "1px solid rgba(232,212,77,0.2)",
                 flexShrink: 0,
               }}
             >
@@ -133,7 +136,7 @@ export default function TeamsPage({ onNavigate }: TeamsPageProps) {
               <div style={{ display: "flex", gap: 6, marginTop: 3 }}>
                 <span className="tag tag-orange">{team.region}</span>
                 <span style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 11, color: "var(--text-dim)" }}>
-                  {team.flag} {team.country}
+                  {team.country}
                 </span>
               </div>
             </div>

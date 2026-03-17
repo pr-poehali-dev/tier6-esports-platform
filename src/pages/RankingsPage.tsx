@@ -41,7 +41,7 @@ export default function RankingsPage() {
                 display: "flex",
                 alignItems: "center",
                 gap: 10,
-                background: "rgba(255,107,26,0.04)",
+                background: "rgba(232,212,77,0.04)",
               }}
             >
               <div
@@ -78,7 +78,7 @@ export default function RankingsPage() {
                   gap: 14,
                   transition: "background 0.15s",
                 }}
-                onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.04)")}
+                onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.04)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
                 <span
@@ -93,7 +93,7 @@ export default function RankingsPage() {
                 >
                   {team.rank}
                 </span>
-                <div style={{ fontSize: 22 }}>{team.logo}</div>
+                <div style={{ fontFamily: "Orbitron, sans-serif", fontWeight: 900, fontSize: 14, color: "var(--neon)" }}>{team.logo}</div>
                 <div style={{ flex: 1 }}>
                   <div
                     style={{
@@ -185,7 +185,7 @@ export default function RankingsPage() {
                 display: "flex",
                 alignItems: "center",
                 gap: 10,
-                background: "rgba(255,107,26,0.04)",
+                background: "rgba(232,212,77,0.04)",
               }}
             >
               <div style={{ width: 4, height: 20, background: "#60a5fa", borderRadius: 2 }} />
@@ -215,7 +215,7 @@ export default function RankingsPage() {
                   gap: 14,
                   transition: "background 0.15s",
                 }}
-                onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.04)")}
+                onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.04)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
                 <span
@@ -234,13 +234,16 @@ export default function RankingsPage() {
                   style={{
                     width: 40,
                     height: 40,
-                    fontSize: 20,
+                    fontFamily: "Orbitron, sans-serif",
+                    fontWeight: 900,
+                    fontSize: 12,
+                    color: "var(--neon)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "rgba(255,107,26,0.1)",
+                    background: "rgba(232,212,77,0.08)",
                     borderRadius: 4,
-                    border: "1px solid rgba(255,107,26,0.2)",
+                    border: "1px solid rgba(232,212,77,0.2)",
                   }}
                 >
                   {player.avatar}
@@ -306,69 +309,7 @@ export default function RankingsPage() {
             </div>
           </div>
 
-          {/* Prize leaderboard */}
-          <div
-            style={{
-              marginTop: 20,
-              background: "var(--surface-2)",
-              border: "1px solid var(--surface-3)",
-              borderRadius: 8,
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                padding: "16px 20px",
-                borderBottom: "1px solid var(--surface-3)",
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-                background: "rgba(250,204,21,0.04)",
-              }}
-            >
-              <div style={{ width: 4, height: 20, background: "#facc15", borderRadius: 2 }} />
-              <h2
-                style={{
-                  fontFamily: "Orbitron, sans-serif",
-                  fontWeight: 700,
-                  fontSize: 13,
-                  color: "#fff",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  margin: 0,
-                }}
-              >
-                Призовые 2026
-              </h2>
-            </div>
-            <div style={{ padding: "16px 20px" }}>
-              {[
-                { name: "Echofall", prize: "55 000 ₽", logo: "⚡", titles: 2 },
-              ].map((t) => (
-                <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 14 }}>
-                  <span style={{ fontSize: 20 }}>{t.logo}</span>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontFamily: "Orbitron, sans-serif", fontWeight: 700, fontSize: 14, color: "#fff" }}>
-                      {t.name}
-                    </div>
-                    <div style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 12, color: "var(--text-mid)" }}>
-                      {t.titles} титула в 2026
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "Orbitron, sans-serif",
-                      fontWeight: 900,
-                      fontSize: 18,
-                      color: "#facc15",
-                    }}
-                  >
-                    {t.prize}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
       </div>
 

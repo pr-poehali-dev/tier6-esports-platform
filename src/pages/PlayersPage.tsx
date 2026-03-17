@@ -74,7 +74,7 @@ export default function PlayersPage({ onNavigate }: PlayersPageProps) {
             transition: "background 0.15s",
             borderRadius: i === players.length - 1 ? "0 0 6px 6px" : 0,
           }}
-          onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.06)")}
+          onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.05)")}
           onMouseLeave={e => (e.currentTarget.style.background = "var(--surface-2)")}
         >
           <span
@@ -96,10 +96,13 @@ export default function PlayersPage({ onNavigate }: PlayersPageProps) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: 20,
-                background: "linear-gradient(135deg, rgba(255,107,26,0.2), rgba(255,61,0,0.05))",
+                fontFamily: "Orbitron, sans-serif",
+                fontWeight: 900,
+                fontSize: 12,
+                color: "var(--neon)",
+                background: "rgba(232,212,77,0.08)",
                 borderRadius: 4,
-                border: "1px solid rgba(255,107,26,0.25)",
+                border: "1px solid rgba(232,212,77,0.22)",
                 flexShrink: 0,
               }}
             >
@@ -118,7 +121,7 @@ export default function PlayersPage({ onNavigate }: PlayersPageProps) {
                   {player.nickname}
                 </span>
                 <span style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 12, color: "var(--text-dim)" }}>
-                  {player.flag}
+                  {player.country}
                 </span>
               </div>
               <div style={{ display: "flex", gap: 6, marginTop: 3, alignItems: "center" }}>

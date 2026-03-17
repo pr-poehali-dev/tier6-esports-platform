@@ -54,7 +54,7 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
         <div
           style={{
             position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
-            background: "radial-gradient(ellipse 40% 80% at 85% 50%, rgba(255,107,26,0.07) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse 40% 80% at 85% 50%, rgba(232,212,77,0.05) 0%, transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -68,10 +68,13 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 46,
-              background: "linear-gradient(135deg, rgba(255,107,26,0.25), rgba(255,61,0,0.05))",
+              fontFamily: "Orbitron, sans-serif",
+              fontWeight: 900,
+              fontSize: 20,
+              color: "var(--neon)",
+              background: "rgba(232,212,77,0.08)",
               borderRadius: 8,
-              border: "1px solid rgba(255,107,26,0.35)",
+              border: "1px solid rgba(232,212,77,0.3)",
               flexShrink: 0,
             }}
           >
@@ -87,13 +90,13 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
                   fontSize: 30,
                   color: "var(--neon)",
                   margin: 0,
-                  textShadow: "0 0 20px rgba(255,107,26,0.4)",
+                  textShadow: "0 0 20px rgba(232,212,77,0.4)",
                 }}
               >
                 {player.nickname}
               </h1>
               <span style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 16, color: "var(--text-mid)", fontWeight: 400 }}>
-                {player.flag} {player.realName}
+                {player.realName}
               </span>
             </div>
 
@@ -132,8 +135,8 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
           <div
             style={{
               padding: "16px 28px",
-              background: "rgba(255,107,26,0.08)",
-              border: "1px solid rgba(255,107,26,0.2)",
+              background: "rgba(232,212,77,0.07)",
+              border: "1px solid rgba(232,212,77,0.2)",
               borderRadius: 8,
               textAlign: "center",
             }}
@@ -148,7 +151,7 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
                 fontSize: 44,
                 color: "var(--neon)",
                 lineHeight: 1,
-                textShadow: "0 0 30px rgba(255,107,26,0.6)",
+                textShadow: "0 0 30px rgba(232,212,77,0.5)",
               }}
             >
               {player.stats.rating.toFixed(2)}
@@ -351,7 +354,7 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
                   borderBottom: i < player.mapsStats.length - 1 ? "1px solid var(--surface-3)" : "none",
                   transition: "background 0.15s",
                 }}
-                onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.03)")}
+                onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.03)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
                 <span style={{ fontFamily: "Rajdhani, sans-serif", fontWeight: 600, fontSize: 14, color: "#e0e4ed" }}>
@@ -413,7 +416,7 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
                   gap: 12,
                   flexWrap: "wrap",
                 }}
-                onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,107,26,0.03)")}
+                onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,212,77,0.03)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
                 <span
@@ -481,15 +484,14 @@ export default function PlayerPage({ playerId, onNavigate }: PlayerPageProps) {
                 style={{
                   position: "absolute", top: 0, left: 0, right: 0,
                   height: 2,
-                  background: ach.place.includes("🥇") ? "linear-gradient(90deg, #facc15, #f97316)" : "linear-gradient(90deg, var(--neon), #ff3d00)",
+                  background: "linear-gradient(90deg, var(--neon), #c8a800)",
                 }}
               />
-              <div style={{ fontSize: 22, marginBottom: 8 }}>{ach.place.split(" ")[0]}</div>
               <div style={{ fontFamily: "Rajdhani, sans-serif", fontWeight: 700, fontSize: 15, color: "#e0e4ed", marginBottom: 4 }}>
                 {ach.title}
               </div>
               <div style={{ fontFamily: "Rajdhani, sans-serif", fontSize: 13, color: "var(--text-mid)", marginBottom: 8 }}>
-                {ach.place.replace(ach.place.split(" ")[0] + " ", "")}
+                {ach.place}
               </div>
               <div style={{ fontFamily: "Share Tech Mono, monospace", fontSize: 11, color: "var(--text-dim)" }}>
                 {ach.date}

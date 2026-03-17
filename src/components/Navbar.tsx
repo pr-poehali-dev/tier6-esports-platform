@@ -105,7 +105,7 @@ export default function Navbar({ activePage, onNavigate }: NavbarProps) {
                 borderRadius: 4,
                 backgroundColor:
                   activePage === item.id
-                    ? "rgba(255, 107, 26, 0.08)"
+                    ? "rgba(232, 212, 77, 0.08)"
                     : "transparent",
               }}
             >
